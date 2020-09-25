@@ -1,0 +1,36 @@
+@import "../../Constants.scss";
+
+
+.popup {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  background: $White;
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  & ul {
+    margin: 10px 0;
+
+    & li {
+      padding: 3px 10px;
+      transition: .3s ease;
+      width: calc(100% - 20px);
+      height: 100%;
+
+      & a{
+        color: $Black;
+        display: flex;
+        width: 100%;
+      }
+
+      &:hover {
+        background: $Blue;
+        cursor: pointer;
+      }
+    }
+  }
+}

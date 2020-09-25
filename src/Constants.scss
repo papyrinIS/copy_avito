@@ -1,0 +1,242 @@
+$Blue: #00aaff;
+$Gray: #adadad;
+$White: #ffffff;
+$Black: #000000;
+$Red: #e50700;
+$DarkBlue: #0d7aff;
+$LynxWhite: #f7f7f7;
+$Brown: #8c6e63;
+$Green: #97cf27;
+$DarkGreen: #49c749;
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+li,ul{
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  height: fit-content;
+  width: fit-content;
+  color: $Blue;
+  transition: .5s ease;
+  font-size: 14px;
+  padding: 9px 15px;
+  border: none;
+  background: transparent;
+
+
+  & a {
+    color: $Blue;
+    transition: .5s ease;
+
+    &:hover {
+      color: $Red;
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    color: $Red;
+    cursor: pointer;
+  }
+
+}
+
+.blueButton {
+  color: $White;
+  background: $Blue;
+  font-size: 14px;
+  padding: 9px 15px;
+  border: none;
+  transition: .5s ease;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 5px;
+
+  & a {
+    color: $White;
+  }
+
+  &:hover {
+    background: $DarkBlue;
+    cursor: pointer;
+  }
+}
+
+
+.whiteButton {
+  color: $Black;
+  background: $White;
+  font-size: 14px;
+  padding: 7px 20px;
+  transition: .5s ease;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 0 3px 3px 0;
+  border: 2.3px solid $Gray;
+
+  & a {
+    color: $Black;
+  }
+
+  &:hover {
+    background: $LynxWhite;
+    cursor: pointer;
+  }
+}
+
+
+.closeButton {
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    display: flex;
+    width: 25px;
+    height: 20px;
+    border-top: 3px solid $Gray;
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    width: 25px;
+    height: 20px;
+    border-top: 3px solid $Gray;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.failedField {
+  border: 2px solid $Red !important;
+}
+
+.animate-enter {
+  opacity: 0;
+}
+
+.animate-enter-active {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.animate-exit {
+  opacity: 1;
+}
+
+.animate-exit-active {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+
+.status {
+  height: 35px;
+  width: 100%;
+  margin-bottom: 10px;
+  color: $Red;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.line {
+  margin: 10px 0;
+  width: 100%;
+  height: 1px;
+  background: $Gray;
+}
+
+.input {
+  height: 30px;
+  width: 60%;
+  border-radius: 3px;
+  border: 1px solid $Gray;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  width: 93%;
+  height: 100px;
+  resize: none;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.buttonPosition {
+  margin: 10px 0 10px 10px;
+  border-radius: 3px;
+}
+
+.menuPoints {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  width: 30px;
+  height: 11px;
+  transition: .3s ease;
+
+  & .points {
+    width: 5px;
+    height: 5px;
+    background: $Black;
+    border-radius: 100%;
+    margin:3px 0 0 12px;
+
+    &:before {
+      content: '  ';
+      display: flex;
+      width: 5px;
+      height: 5px;
+      background: $Black;
+      border-radius: 100%;
+      margin-left: 7px;
+    }
+
+    &:after {
+      content: '  ';
+      display: flex;
+      width: 5px;
+      height: 5px;
+      background: $Black;
+      border-radius: 100%;
+      margin-top: -5px;
+      margin-left: -8px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $Gray;
+    border-radius: 10px;
+  }
+}
+
+
+

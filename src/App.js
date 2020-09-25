@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {Routers} from "./pages/Routers";
+import {useDispatch, useSelector} from "react-redux";
+import {AuthActions} from "./redux/auth/AuthActions";
+import {Header} from "./components/header/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {message} = useSelector(state => {
+        return {
+            message: state.AuthReducer.message
+        }
+    })
+    const dispatch = useDispatch()
+    React.useEffect(() => {
+        if (message) {
+            setTimeout(() => dispatch(AuthActions.messageApiAC('')), 6000)
+        }
+    }, [message, dispatch])
+
+    React.useEffect(() => {
+        const storageName = 'userData';
+        const data = JSON.parse(localStorage.getItem(storageName))
+        if (data && data.token) {
+            dispatch(AuthActions.isAuthAC(data))
+        }
+    }, [dispatch])
+
+
+    return (
+        <div className="App">
+            <Header/>
+            <Routers/>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,33 @@
+@import "../../Constants.scss";
+
+.ads{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  color:$Black;
+  font-size: 20px;
+  background: white;
+  & h1{
+    text-align: left;
+  }
+  &__button{
+    background: $Green;
+    padding: 10px 25px;
+    color: #ffffff;
+    width: 178px;
+    border: 1px solid $Green;
+    border-radius: 3px;
+    transition: .3s ease;
+    &:hover{
+      cursor: pointer;
+      background: #78ab13;
+    }
+  }
+  &__block{
+    width: 100%;
+  }
+}

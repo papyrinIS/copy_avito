@@ -1,0 +1,61 @@
+@import "../../Constants.scss";
+
+.login {
+  position: fixed;
+  z-index: 10;
+  width: 410px;
+  height: 510px;
+  top: calc(50% - 270px);
+  left: calc(50% - 220px);
+  background: $White;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    font-size: 14px;
+    height: 350px;
+
+    & h3 {
+      font-size: 25px;
+    }
+
+    & input {
+      height: 30px;
+      width: 100%;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      border:1px solid $Gray;
+    }
+    & .padding{
+      padding: 10px 85px;
+    }
+  }
+  &__registerButton{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+&__sn{
+  width: calc(100% + 30px);
+  height: 410px;
+  border-bottom: 1px solid $Gray;
+}
+  &__close {
+    position: absolute;
+    top:0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../Constants.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__buttons {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    background: $LynxWhite;
+
+    & .buttonContainer {
+      width: 90%;
+      height: 45px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  .container {
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+      display: flex;
+      width: 135px;
+
+      & img {
+        width: 130px;
+        height: 45px;
+      }
+    }
+
+    &__search {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .categories {
+      width: 17%;
+      height: 35px;
+      border: 2px solid $Gray;
+      border-radius: 3px 0 0 3px;
+
+      &__category {
+        height: 35px;
+      }
+    }
+
+    .cites {
+      width: 16%;
+      height: 35px;
+      border: 2px solid $Gray;
+
+      &__city {
+        height: 35px;
+      }
+    }
+
+    &__inputSearch {
+      width: 48%;
+      height: 35px;
+      border: 2px solid $Gray;
+    }
+
+    .changeRadius {
+      width: 16%;
+      height: 35px;
+      border: 2px solid $Gray;
+
+      &__radius {
+        height: 35px;
+      }
+    }
+  }
+}
+

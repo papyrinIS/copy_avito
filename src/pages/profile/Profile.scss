@@ -1,0 +1,93 @@
+@import "../../Constants.scss";
+
+.profile {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+
+
+    .userInfo {
+      height: 100%;
+      width: 30%;
+
+      &__avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background: $Brown;
+        margin: 10px 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        & p {
+          margin: 0;
+          font-size: 70px;
+          color: $White;
+          font-weight: 700;
+          height: 95px;
+        }
+
+        & .buttonAvatar {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background: #ebebeb;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+
+          & img {
+            width: 20px;
+            height: 20px;
+
+
+          }
+        }
+      }
+      &__userName{
+        text-align: left;
+        margin: 5px 0 0 0; ;
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .navBar{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 10px;
+        &__link{
+          font-size: 18px;
+          color:$Blue;
+          margin: 5px 0;
+          transition: .3s ease;
+font-weight: 500;
+          &:hover{
+            color:$Red;
+          }
+
+        }
+      }
+    }
+
+    & .mainBlock {
+      height: 100%;
+      width: 80%;
+      padding: 20px;
+
+    }
+  }
+}
